@@ -1,0 +1,75 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OS Notes</title>
+</head>
+<body>
+  <hr />
+  <a href="index.html">Back</a>
+  <h2>OS notes :</h2>
+  <ol>
+  <li>
+    <h3>Deadlocks</h3>
+  </li>
+    <h4>Necessary Conditions for Deadlock :</h4>
+    <ol>
+    <li>
+      Mutual exclusion
+    </li>
+      One resource is held in nonshareble mode. If one process is holding resouce
+      and another resource request it then requesting process should be delayed until
+      it is released.
+    <li>
+      Hold and wait :
+    </li>
+      process is holding atleast one resource and waiting to aquire additional
+      resource held by another process.
+    <li>
+      No preemtion :
+    </li>
+      Resource cant be preempted. Resource can be released only after the process
+      holding it releases the resource after complition.
+    <li>
+      Circular wait :
+    </li>
+      A set of process exists P ={p1,p2,p2,...pn} such that p1 is waiting for resource held by p2,
+      p2 is watining for resource held by p3 and so no.. pn is waiting on resouce held by p0.
+    </ol>
+    <h4>Resouce Allocation Graph :</h4>
+    If there is no cycle in the resource allocation graph of the processes then there is no deadlock. But if
+    cycle is present in the graph then deadlock may be the present.
+
+    <h4>Deadlocks prevention :</h4>
+    By ensuring atleast one of the conditions responsible for deadlock doesnt hold we can prevent deadlock occurence.
+    <ol type="1">
+    <li>
+    <em>Mutual exclusion</em>
+    </li>
+    The mutual-exclusion condition must hold for nonsharable resources.
+    <li>
+    Hold and wait :
+    </li>
+    To ensure that the hold-and-wait condition never occurs in the system, we must
+    guarantee that, whenever a process requests a resource, it does not hold any
+    other resources.
+    <li>
+    No preemtion :
+    </li>
+    If a process is holding some resources and requests another resource that cannot be immediately
+    allocated to it (that is, the process must wait), then all resources the process is
+    currently holding are preempted. In other words, these resources are implicitly
+    released. The preempted resources are added to the list of resources for which
+    the process is waiting. The process will be restarted only when it can regain its
+    old resources, as well as the new ones that it is requesting
+    <li>
+    Circular wait :
+    </li>
+    One way to ensure that this condition never holds is to impose a total ordering of
+    all resource types and to require that each process requests resources in an
+    increasing order of enumeration.
+    </ol>
+  <hr />
+  </ol>
+</body>
+</html></html>
